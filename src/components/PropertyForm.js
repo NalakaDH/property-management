@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { fetchPropertyById, createProperty, updateProperty } from "../services/api";
+import "../styles/PropertyForm.css";
 
 const PropertyForm = () => {
     const [formData, setFormData] = useState({
@@ -32,7 +33,7 @@ const PropertyForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="property-form" onSubmit={handleSubmit}>
             <input name="title" value={formData.title} onChange={handleChange} placeholder="Title" required />
             <input name="type" value={formData.type} onChange={handleChange} placeholder="Type" required />
             <input name="purpose" value={formData.purpose} onChange={handleChange} placeholder="Purpose" required />

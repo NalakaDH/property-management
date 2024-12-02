@@ -1,0 +1,50 @@
+
+.property-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+
+.property-form input,
+.property-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+
+.property-form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+
+.property-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.property-form button:hover {
+    background-color: #0056b3;
+}
+
+.property-form input::placeholder,
+.property-form textarea::placeholder {
+    color: #aaa;
+}

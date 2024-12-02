@@ -1,16 +1,15 @@
-/* General container styling */
+
 .property-list-container {
     padding: 20px;
     font-family: Arial, sans-serif;
 }
 
-/* Header */
 .property-list-container h2 {
     color: #333;
     margin-bottom: 20px;
 }
 
-/* Add button */
+
 .property-list-container .add-button {
     display: inline-block;
     text-decoration: none;
@@ -22,7 +21,7 @@
     font-size: 14px;
 }
 
-/* Table styles */
+
 .property-table {
     width: 100%;
     border-collapse: collapse;
@@ -46,7 +45,7 @@
     background-color: #f9f9f9;
 }
 
-/* Action links and buttons */
+
 .property-actions a {
     text-decoration: none;
     color: #007bff;

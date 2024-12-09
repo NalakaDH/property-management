@@ -13,7 +13,7 @@ const LandingPage = () => {
                     <Link to="/details/:id" className="landing-button">
                         View Properties
                     </Link>
-                    <Link to="/list" className="landing-button">
+                    <Link to="/add" className="landing-button">
                         Add Property
                     </Link>
                     

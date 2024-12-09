@@ -64,7 +64,7 @@ const PropertyList = () => {
                             <td>{property.address}</td>
                             <td>{property.description}</td>
                             <td className="actions">
-                                <Link to={`/details/${property.id}`}>
+                                <Link to={`/list${property.id}`}>
                                     <FaEye /> View
                                 </Link>
                                 <Link to={`/edit/${property.id}`}>

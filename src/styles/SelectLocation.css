@@ -1,0 +1,84 @@
+/* Page Container */
+.select-location-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #3a6186, #89253e);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Page Title */
+.select-location-page h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Map Container */
+.leaflet-container {
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Location Details Section */
+.location-details {
+    margin-top: 15px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Address Text */
+.location-details p {
+    margin: 5px 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Confirm Button */
+.confirm-button {
+    background-color: #3a6186;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.confirm-button:hover {
+    background-color: #2a4965;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .select-location-page h2 {
+        font-size: 24px;
+    }
+
+    .location-details {
+        font-size: 14px;
+    }
+
+    .confirm-button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}

@@ -1,30 +1,95 @@
-
-.property-details-container {
+/* Full page background */
+.property-details-page {
+    background: url("/public/assets/back.png") no-repeat center center fixed;
+    background-size: cover;
     padding: 20px;
-    max-width: 600px;
-    margin: auto;
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-
-.property-details-container h2 {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
     color: #333;
-    text-align: center;
-    margin-bottom: 20px;
 }
 
+/* Page title */
+.page-title {
+    text-align: center;
+    font-size: 36px;
+    color: #3a6186;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
 
+/* Container for all properties */
+.properties-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
 
+/* Individual property card */
+.property-details-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+}
+
+.property-details-container:hover {
+    transform: scale(1.03);
+}
+
+/* Property title */
+.property-details-container h2 {
+    font-size: 24px;
+    color: #2575fc;
+    margin-bottom: 15px;
+}
+
+/* Property image */
+.property-details-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Property details */
 .property-details-container p {
     font-size: 16px;
-    margin: 10px 0;
+    margin-bottom: 10px;
+    line-height: 1.5;
 }
 
 .property-details-container p strong {
-    font-weight: bold;
-    color: #555;
+    color: #6a11cb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .properties-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Home button styling */
+.home-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 18px;
+    color: #fff;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.home-button:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+    transform: scale(1.1);
 }

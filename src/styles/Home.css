@@ -1,0 +1,64 @@
+/* Full page background */
+.home-page {
+    background: url("https://source.unsplash.com/1600x900/?real-estate,architecture") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+/* Content container */
+.home-content {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    width: 90%;
+}
+
+/* Heading styling */
+.home-content h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Subheading styling */
+.home-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #d3d3d3;
+}
+
+/* Button container */
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Animated button */
+.animated-button {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.animated-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(90deg, #feb47b, #ff7e5f);
+}

@@ -1,50 +1,80 @@
-
-.property-form {
-    max-width: 500px;
-    margin: 0 auto;
+/* Page background */
+.property-form-page {
+    background: url("/public/assets/back.png") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
 }
 
+/* Form container */
+.property-form-container {
+    max-width: 600px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    font-family: 'Poppins', sans-serif;
+    animation: fadeIn 1s ease-in-out;
+}
 
-.property-form input,
-.property-form textarea {
+/* Title styling */
+.property-form-container h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #3a6186;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Input and textarea styling */
+.property-form-container input,
+.property-form-container textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     font-size: 16px;
-    box-sizing: border-box;
 }
 
-
-.property-form textarea {
-    resize: vertical;
-    height: 100px;
+.property-form-container input:focus,
+.property-form-container textarea:focus {
+    border-color: #3a6186;
+    outline: none;
+    box-shadow: 0 0 5px rgba(58, 97, 134, 0.8);
 }
 
-
-.property-form button {
+/* Submit and Home buttons */
+.property-form-container button {
     width: 100%;
-    padding: 10px;
-    background-color: #007bff;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
     color: white;
+    background-color: #3a6186;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 8px;
     cursor: pointer;
+    margin-top: 15px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.property-form button:hover {
-    background-color: #0056b3;
+.property-form-container button:hover {
+    background-color: #2a4965;
+    transform: scale(1.05);
 }
 
-.property-form input::placeholder,
-.property-form textarea::placeholder {
-    color: #aaa;
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

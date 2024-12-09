@@ -57,7 +57,15 @@ const PropertyForm = () => {
         e.preventDefault();
         const formDataWithAddress = { ...formData, address };
         const apiCall = id ? updateProperty(id, formDataWithAddress) : createProperty(formDataWithAddress);
-        apiCall.then(() => navigate("/"));
+        apiCall
+            .then(() => {
+                // After successful add/update, navigate to PropertyList page
+                navigate("/property-list");
+            })
+            .catch((error) => {
+                console.error("Error adding/updating property:", error);
+                alert("There was an error adding/updating the property.");
+            });
     };
 
     const LocationMarker = () => {
@@ -87,11 +95,41 @@ const PropertyForm = () => {
             <div className="property-form-container">
                 <h2>{id ? "Update Property" : "Add New Property"}</h2>
                 <form onSubmit={handleSubmit}>
-                    <input name="title" value={formData.title} onChange={handleChange} placeholder="Title" required />
-                    <input name="type" value={formData.type} onChange={handleChange} placeholder="Type" required />
-                    <input name="purpose" value={formData.purpose} onChange={handleChange} placeholder="Purpose" required />
-                    <input name="price" value={formData.price} onChange={handleChange} placeholder="Price" required />
-                    <input name="status" value={formData.status} onChange={handleChange} placeholder="Status" required />
+                    <input
+                        name="title"
+                        value={formData.title}
+                        onChange={handleChange}
+                        placeholder="Title"
+                        required
+                    />
+                    <input
+                        name="type"
+                        value={formData.type}
+                        onChange={handleChange}
+                        placeholder="Type"
+                        required
+                    />
+                    <input
+                        name="purpose"
+                        value={formData.purpose}
+                        onChange={handleChange}
+                        placeholder="Purpose"
+                        required
+                    />
+                    <input
+                        name="price"
+                        value={formData.price}
+                        onChange={handleChange}
+                        placeholder="Price"
+                        required
+                    />
+                    <input
+                        name="status"
+                        value={formData.status}
+                        onChange={handleChange}
+                        placeholder="Status"
+                        required
+                    />
                     <textarea
                         name="description"
                         value={formData.description}

@@ -156,6 +156,9 @@ const PropertyForm = () => {
                     </div>
                     <button type="submit">{id ? "Update Property" : "Add Property"}</button>
                 </form>
+                <button className="home-button" onClick={() => navigate("/property-list")}>
+                    Go to Property List
+                </button>
                 <button className="home-button" onClick={() => navigate("/")}>
                     Go to Home
                 </button>

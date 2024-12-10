@@ -6,6 +6,38 @@
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background: rgba(58, 97, 134, 0.9); /* Slightly transparent background */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-button:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+    transform: scale(1.05);
 }
 
 /* Page title */
@@ -20,9 +52,10 @@
 /* Container for all properties */
 .properties-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px; /* Add spacing between items */
+    width: 100%;
+    max-width: 800px; /* Limit the width for readability */
 }
 
 /* Individual property card */
@@ -32,7 +65,6 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     padding: 20px;
     width: 100%;
-    max-width: 400px;
     transition: transform 0.3s ease;
 }
 
@@ -44,14 +76,6 @@
 .property-details-container h2 {
     font-size: 24px;
     color: #2575fc;
-    margin-bottom: 15px;
-}
-
-/* Property image */
-.property-details-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
     margin-bottom: 15px;
 }
 
@@ -69,27 +93,29 @@
 /* Responsive Design */
 @media (max-width: 768px) {
     .properties-container {
+        padding: 10px;
+    }
+
+    .property-details-container {
+        padding: 15px;
+    }
+
+    .property-details-container h2 {
+        font-size: 20px;
+    }
+
+    .property-details-container p {
+        font-size: 14px;
+    }
+
+    .navbar {
         flex-direction: column;
         align-items: center;
     }
-}
-/* Home button styling */
-.home-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    font-size: 18px;
-    color: #fff;
-    background: linear-gradient(to right, #6a11cb, #2575fc);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
 
-.home-button:hover {
-    background: linear-gradient(to right, #2575fc, #6a11cb);
-    transform: scale(1.1);
+    .navbar-button {
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: 300px;
+    }
 }

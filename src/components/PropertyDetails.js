@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { fetchProperties } from "../services/api"; // Fetch all properties
-import { useNavigate } from "react-router-dom"; // Navigate back to Home
+import { useNavigate } from "react-router-dom"; // Navigate for navigation
 import "../styles/PropertyDetails.css";
 
 const PropertyDetails = () => {
@@ -35,12 +35,19 @@ const PropertyDetails = () => {
 
     return (
         <div className="property-details-page">
+            <div className="navbar">
+                <button className="navbar-button" onClick={() => navigate("/")}>
+                    Go to Home
+                </button>
+                <button className="navbar-button" onClick={() => navigate("/property-list")}>
+                    Go to Property List
+                </button>
+            </div>
             <h1 className="page-title">Property Details</h1>
             <div className="properties-container">
                 {properties.map((property) => (
                     <div className="property-details-container" key={property.id}>
                         <h2>{property.title}</h2>
-                       
                         <p><strong>Type:</strong> {property.type}</p>
                         <p><strong>Purpose:</strong> {property.purpose}</p>
                         <p><strong>Price:</strong> ${property.price}</p>
@@ -50,9 +57,6 @@ const PropertyDetails = () => {
                     </div>
                 ))}
             </div>
-            <button className="home-button" onClick={() => navigate("/")}>
-                Go to Home
-            </button>
         </div>
     );
 };

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { fetchPropertyById, createProperty, updateProperty } from "../services/api";
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from "react-leaflet";
-import { GeoSearchControl, OpenStreetMapProvider } from "leaflet-geosearch";
 import axios from "axios";
 import "leaflet/dist/leaflet.css";
 import "leaflet-geosearch/dist/geosearch.css";
@@ -16,8 +15,8 @@ const PropertyForm = () => {
         price: "",
         status: "",
         description: "",
-        location: { lat: 51.505, lng: -0.09 },
-        address: "London, UK",
+        location: { lat: 6.9271, lng: 79.8612 }, // Default to Colombo
+        address: "Colombo, Sri Lanka", // Default address
     });
 
     const { id } = useParams();
